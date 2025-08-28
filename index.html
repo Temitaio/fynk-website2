@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fynk.ca - Custom Software Development, Integrations & Migration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #111827; /* Dark blue-gray */
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">fynk.ca</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600">About Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden md:inline-block bg-indigo-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-700 cta-button">Get a Quote</a>
+             <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 text-gray-600 hover:text-indigo-600">Services</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About Us</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
+            <a href="#contact" class="block mt-2 w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-700 cta-button">Get a Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Engineering Your Digital Solutions</h2>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">We build robust, scalable, and custom software to solve your most complex business challenges.</p>
+                <a href="#contact" class="bg-indigo-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-indigo-600 cta-button">Let's Build Together</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Our Core Services</h3>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">From concept to deployment, we provide end-to-end software solutions tailored to your needs.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1: Custom Software Development -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md service-card transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-6">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold mb-3">Custom Software Development</h4>
+                        <p class="text-gray-600">We design and develop bespoke software applications from scratch, perfectly aligned with your business processes and goals.</p>
+                    </div>
+                    <!-- Service 2: System Integrations -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md service-card transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-6">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold mb-3">System Integrations</h4>
+                        <p class="text-gray-600">Seamlessly connect your disparate systems, applications, and data sources to improve efficiency and create a unified workflow.</p>
+                    </div>
+                    <!-- Service 3: Data & Platform Migration -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md service-card transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-6">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </div>
+                        <h4 class="text-2xl font-semibold mb-3">Data & Platform Migration</h4>
+                        <p class="text-gray-600">Modernize your infrastructure by migrating legacy systems and data to cloud platforms with minimal disruption and maximum security.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Your Partner in Innovation</h3>
+                    <p class="text-gray-600 mt-4 text-lg">At Fynk, we're more than just developers; we're problem solvers. Our mission is to leverage technology to create elegant, efficient, and impactful solutions. We believe in building strong partnerships with our clients, founded on transparency, collaboration, and a shared drive for success.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Ready to Start a Project?</h3>
+                    <p class="text-gray-600 mt-2">We'd love to hear about your idea. Fill out the form below or email us directly.</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" name="name" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cta-button">Send Message</button>
+                        </div>
+                    </form>
+                    <div id="form-message" class="mt-4 text-center"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Fynk.ca. All Rights Reserved.</p>
+            <p class="text-gray-400 mt-2">Custom Software Solutions | Toronto, ON</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu on link click
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Contact form submission handling
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation feedback
+            formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+            formMessage.className = 'text-green-600 font-medium';
+            
+            contactForm.reset();
+
+            // Clear the message after a few seconds
+            setTimeout(() => {
+                formMessage.textContent = '';
+            }, 5000);
+        });
+    </script>
+
+</body>
+</html>
