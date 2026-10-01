@@ -1,10 +1,22 @@
 @import "tailwindcss";
 
 .hero-bg {
-    background-color: #111827; /* Dark blue-gray */
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.92)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+}
+.cta-band-bg {
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.88)), url('../images/cta-band.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
 }
 .font-display {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-family: 'Unbounded', 'Inter', sans-serif;
+    letter-spacing: -0.01em;
 }
 .cta-button {
     transition: all 0.3s ease;
@@ -15,7 +27,7 @@
 }
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid #4f46e5;
+    outline: 2px solid #000;
     outline-offset: 2px;
     border-radius: 2px;
 }
