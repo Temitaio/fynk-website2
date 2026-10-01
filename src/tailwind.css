@@ -45,9 +45,8 @@
 }
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid #000;
+    outline: 2px solid #facc15;
     outline-offset: 2px;
-    border-radius: 2px;
 }
 summary::-webkit-details-marker {
     display: none;
@@ -68,12 +67,12 @@ summary::-webkit-details-marker {
 .reveal-delay-3.revealed { transition-delay: 0.3s; }
 .reveal-delay-4.revealed { transition-delay: 0.4s; }
 
-/* Header gains a shadow once the page scrolls past the hero */
-header {
+/* Floating pill nav gains a deeper shadow once the page scrolls */
+#site-header {
     transition: box-shadow 0.3s ease;
 }
-header.header-scrolled {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+#site-header.header-scrolled {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Underline-grow hover effect for desktop nav links */
