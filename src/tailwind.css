@@ -15,7 +15,8 @@
     filter: grayscale(100%);
 }
 .font-display {
-    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-family: 'Unbounded', 'Inter', sans-serif;
+    letter-spacing: -0.01em;
 }
 .cta-button {
     transition: all 0.3s ease;
