@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* Background photo lives on ::before so its grayscale filter doesn't
-   also desaturate colored content (e.g. the yellow cta-ring) sitting
+   also desaturate colored content (e.g. the purple cta-ring) sitting
    on top of it - filter on the section itself would rasterize the
    whole subtree together. */
 .hero-bg,
@@ -36,7 +36,7 @@
     transition: all 0.3s ease;
 }
 .cta-ring {
-    outline: 3px solid #facc15;
+    outline: 3px solid #a855f7;
     outline-offset: 4px;
 }
 .service-card:hover {
@@ -45,7 +45,7 @@
 }
 a:focus-visible,
 button:focus-visible {
-    outline: 2px solid #facc15;
+    outline: 2px solid #a855f7;
     outline-offset: 2px;
 }
 summary::-webkit-details-marker {
