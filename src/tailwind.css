@@ -3,6 +3,9 @@
 .hero-bg {
     background-color: #111827; /* Dark blue-gray */
 }
+.font-display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
 .cta-button {
     transition: all 0.3s ease;
 }
