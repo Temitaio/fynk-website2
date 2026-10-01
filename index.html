@@ -40,7 +40,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preload" as="image" href="assets/images/hero-bg.jpg">
+    <link rel="preload" as="image" href="assets/images/hero-bg.jpg" fetchpriority="high">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -50,31 +50,33 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header -->
-    <header id="site-header" class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <header class="sticky top-4 z-50 px-4">
+        <div id="site-header" class="container mx-auto max-w-5xl bg-black rounded-full px-6 py-3 flex justify-between items-center shadow-lg">
             <a href="index.html" class="flex items-center space-x-2">
-                <img src="logo.png" alt="Fynk Logo" width="32" height="32" class="h-8 w-8 rounded-lg">
-                <span class="text-2x1 font-bold text-gray-900">Fynk</span>
+                <img src="logo.png" alt="Fynk Logo" width="32" height="32" class="h-8 w-8 rounded-lg invert">
+                <span class="text-2x1 font-bold text-white">Fynk</span>
             </a>
             <nav class="hidden md:flex space-x-8">
-                <a href="#services" class="nav-link text-gray-600 hover:text-black">Services</a>
-                <a href="#case-studies" class="nav-link text-gray-600 hover:text-black">Case Studies</a>
-                <a href="#about" class="nav-link text-gray-600 hover:text-black">About Us</a>
-                <a href="#contact" class="nav-link text-gray-600 hover:text-black">Contact</a>
+                <a href="#services" class="nav-link text-gray-300 hover:text-white">Services</a>
+                <a href="#case-studies" class="nav-link text-gray-300 hover:text-white">Case Studies</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white">About Us</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
             </nav>
-            <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="hidden md:inline-block bg-black text-white font-semibold px-5 py-2 rounded-lg hover:bg-gray-800 cta-button cta-ring">Book a Free Consultation</a>
+            <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="hidden md:inline-block bg-yellow-400 text-black font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 cta-button">Book a Free Consultation</a>
              <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-gray-700 focus:outline-none">
+            <button id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#services" class="block py-2 text-gray-600 hover:text-black">Services</a>
-            <a href="#case-studies" class="block py-2 text-gray-600 hover:text-black">Case Studies</a>
-            <a href="#about" class="block py-2 text-gray-600 hover:text-black">About Us</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-black">Contact</a>
-            <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="block mt-2 w-full text-center bg-black text-white font-semibold px-5 py-2 rounded-lg hover:bg-gray-800 cta-button cta-ring">Book a Free Consultation</a>
+        <div id="mobile-menu" class="hidden md:hidden container mx-auto max-w-5xl mt-2">
+            <div class="bg-black rounded-2xl px-6 py-4 shadow-lg">
+                <a href="#services" class="block py-2 text-gray-300 hover:text-white">Services</a>
+                <a href="#case-studies" class="block py-2 text-gray-300 hover:text-white">Case Studies</a>
+                <a href="#about" class="block py-2 text-gray-300 hover:text-white">About Us</a>
+                <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+                <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="block mt-2 w-full text-center bg-yellow-400 text-black font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 cta-button">Book a Free Consultation</a>
+            </div>
         </div>
     </header>
 
@@ -82,10 +84,10 @@
         <!-- Hero Section -->
         <section class="hero-bg text-white">
             <div class="container mx-auto px-6 py-24 md:py-32 text-center reveal">
-                <h1 class="font-display text-4xl md:text-6xl font-bold leading-tight mb-4">Your systems, data, and reports working as one</h1>
+                <h1 class="font-display text-5xl md:text-7xl font-extrabold uppercase tracking-tight leading-[0.95] mb-6">Your systems, data, and reports working as one</h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">We connect the tools your business already runs on, move your data without losing a record, and build reporting that answers the questions your spreadsheets can't.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="bg-black text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-gray-800 cta-button cta-ring">Book a Free Consultation</a>
+                    <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="bg-black text-white font-bold text-lg px-8 py-4 rounded-full hover:bg-gray-800 cta-button cta-ring">Book a Free Consultation</a>
                     <a href="#case-studies" class="text-gray-300 font-semibold hover:text-white cta-button">See Our Work &darr;</a>
                 </div>
             </div>
@@ -168,7 +170,7 @@
             <div class="container mx-auto px-6 text-center reveal">
                 <h2 class="font-display text-2xl md:text-3xl font-bold mb-2">Got a system that doesn't talk to the others?</h2>
                 <p class="text-gray-300 mb-6">That's usually where we start. Tell us what's broken.</p>
-                <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="inline-block bg-white text-black font-bold px-6 py-3 rounded-lg hover:bg-gray-100 cta-button cta-ring">Book a Free Consultation</a>
+                <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="inline-block bg-white text-black font-bold px-6 py-3 rounded-full hover:bg-gray-100 cta-button cta-ring">Book a Free Consultation</a>
             </div>
         </section>
 
@@ -307,7 +309,7 @@
                 </div>
                 <div class="max-w-2xl mx-auto">
                     <div class="text-center mb-8">
-                        <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="inline-block border-2 border-black text-black font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 cta-button cta-ring">Book a Free Consultation</a>
+                        <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="inline-block border-2 border-black text-black font-semibold px-6 py-3 rounded-full hover:bg-gray-100 cta-button cta-ring">Book a Free Consultation</a>
                     </div>
                     <div class="relative mb-8">
                         <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-300"></div></div>
@@ -331,7 +333,7 @@
                             <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-black focus:border-black"></textarea>
                         </div>
                         <div>
-                            <button type="submit" class="w-full bg-black text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black cta-button cta-ring">Send Message</button>
+                            <button type="submit" class="w-full bg-black text-white font-bold py-3 px-6 rounded-full hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black cta-button cta-ring">Send Message</button>
                         </div>
                     </form>
                     <div id="form-message" class="mt-4 text-center"></div>
