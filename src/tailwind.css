@@ -1,25 +1,43 @@
 @import "tailwindcss";
 
-.hero-bg {
+/* Background photo lives on ::before so its grayscale filter doesn't
+   also desaturate colored content (e.g. the yellow cta-ring) sitting
+   on top of it - filter on the section itself would rasterize the
+   whole subtree together. */
+.hero-bg,
+.cta-band-bg {
+    position: relative;
     background-color: #000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.92)), url('../images/hero-bg.jpg');
+}
+.hero-bg > *,
+.cta-band-bg > * {
+    position: relative;
+    z-index: 1;
+}
+.hero-bg::before,
+.cta-band-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);
 }
-.cta-band-bg {
-    background-color: #000;
+.hero-bg::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.92)), url('../images/hero-bg.jpg');
+}
+.cta-band-bg::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.88)), url('../images/cta-band.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(100%);
 }
 .font-display {
-    font-family: 'Unbounded', 'Inter', sans-serif;
-    letter-spacing: -0.01em;
+    font-family: 'Poppins', 'Inter', sans-serif;
 }
 .cta-button {
     transition: all 0.3s ease;
+}
+.cta-ring {
+    outline: 3px solid #facc15;
+    outline-offset: 4px;
 }
 .service-card:hover {
     transform: translateY(-5px);
