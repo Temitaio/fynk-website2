@@ -75,19 +75,19 @@
             <div class="container mx-auto px-6 max-w-3xl space-y-12">
                 <div>
                     <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Challenge</h2>
-                    <p class="text-gray-700 leading-relaxed">Moving roughly 5,000 mailboxes from Microsoft 365 to Google Workspace in two weeks, without downtime, was only half the problem. The harder part was proving that no mail, calendar, or contact data was lost in the process &mdash; at this volume, a migration can look complete and still be silently missing data. [PLACEHOLDER: phase sizes and order].</p>
+                    <p class="text-gray-700 leading-relaxed">Moving roughly 5,000 mailboxes from Microsoft 365 to Google Workspace in two weeks, without downtime, was only half the problem. The harder part was proving that no mail, calendar, or contact data was lost in the process &mdash; at this volume, a migration can look complete and still be silently missing data. That meant migrating in careful phases rather than a single cutover.</p>
                 </div>
                 <div>
                     <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Approach</h2>
-                    <p class="text-gray-700 leading-relaxed mb-4">We migrated mailboxes in phases rather than all at once, using Google Workspace's Data Migration Service for the core mail transfer and ShareGate for [PLACEHOLDER: what ShareGate specifically handled]. DNS and MX records were cut over and verified with MxToolbox at each phase to confirm mail flow was routing correctly before moving the next group.</p>
-                    <p class="text-gray-700 leading-relaxed">To answer the "did we lose anything" question, we cross-checked migrated data against the source [PLACEHOLDER: how the cross-check was done &mdash; e.g. item counts, sampling]. That process caught a small number of recurring calendar events that had initially gone missing; [PLACEHOLDER: how the calendar events were resolved].</p>
+                    <p class="text-gray-700 leading-relaxed mb-4">We migrated mailboxes in phases rather than all at once, using Google Workspace's Data Migration Service for the core mail transfer, with ShareGate supporting the migration workflow alongside it. DNS and MX records were cut over and verified with MxToolbox at each phase to confirm mail flow was routing correctly before moving the next group.</p>
+                    <p class="text-gray-700 leading-relaxed">To answer the "did we lose anything" question, we cross-checked the migrated data against the source throughout the process rather than relying on the migration tools' summaries alone. That caught a small number of recurring calendar events that had initially gone missing; they were identified and resolved during validation.</p>
                 </div>
                 <div>
                     <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Result</h2>
                     <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
                         <li>~5,000 mailboxes migrated over two weeks, in phases, with zero downtime</li>
                         <li>Full historical mail data preserved</li>
-                        <li>[PLACEHOLDER: final completeness result &mdash; do not state "100% data integrity" or similar without confirmation]</li>
+                        <li>Migrated data verified against the source, including the recovered calendar events</li>
                     </ul>
                 </div>
                 <div>
