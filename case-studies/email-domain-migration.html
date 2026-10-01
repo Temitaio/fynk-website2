@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Email Domain Migration | Fynk</title>
+    <meta name="description" content="How Fynk migrated roughly 5,000 mailboxes from Microsoft 365 to Google Workspace in phases, with zero downtime and full historical mail preserved.">
+    <link rel="canonical" href="https://fynk.ca/case-studies/email-domain-migration.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Fynk">
+    <meta property="og:url" content="https://fynk.ca/case-studies/email-domain-migration.html">
+    <meta property="og:title" content="Case Study: Email Domain Migration | Fynk">
+    <meta property="og:description" content="How Fynk migrated roughly 5,000 mailboxes from Microsoft 365 to Google Workspace in phases, with zero downtime and full historical mail preserved.">
+    <meta property="og:image" content="https://fynk.ca/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Case Study: Email Domain Migration | Fynk">
+    <meta name="twitter:description" content="How Fynk migrated roughly 5,000 mailboxes from Microsoft 365 to Google Workspace in phases, with zero downtime and full historical mail preserved.">
+    <meta name="twitter:image" content="https://fynk.ca/assets/og-image.png">
+    <link rel="icon" href="../favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html" class="flex items-center space-x-2">
+                <img src="../logo.png" alt="Fynk Logo" width="32" height="32" class="h-8 w-8 rounded-lg">
+                <span class="text-2x1 font-bold text-gray-900">Fynk</span>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html#services" class="text-gray-600 hover:text-teal-700">Services</a>
+                <a href="../index.html#case-studies" class="text-gray-600 hover:text-teal-700">Case Studies</a>
+                <a href="../index.html#about" class="text-gray-600 hover:text-teal-700">About Us</a>
+                <a href="../index.html#contact" class="text-gray-600 hover:text-teal-700">Contact</a>
+            </nav>
+            <a href="../index.html#contact" class="hidden md:inline-block bg-teal-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-teal-800 cta-button">Get a Quote</a>
+             <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="../index.html#services" class="block py-2 text-gray-600 hover:text-teal-700">Services</a>
+            <a href="../index.html#case-studies" class="block py-2 text-gray-600 hover:text-teal-700">Case Studies</a>
+            <a href="../index.html#about" class="block py-2 text-gray-600 hover:text-teal-700">About Us</a>
+            <a href="../index.html#contact" class="block py-2 text-gray-600 hover:text-teal-700">Contact</a>
+            <a href="../index.html#contact" class="block mt-2 w-full text-center bg-teal-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-teal-800 cta-button">Get a Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Case Study Hero -->
+        <section class="bg-gray-900 text-white">
+            <div class="container mx-auto px-6 py-20 md:py-24">
+                <span class="text-sm font-semibold text-teal-400 uppercase tracking-wide">Data &amp; Platform Migration Case Study</span>
+                <h1 class="font-display text-3xl md:text-5xl font-bold leading-tight mt-2 mb-4">Migrating 5,000 Mailboxes with Zero Downtime</h1>
+                <p class="text-lg text-gray-300 max-w-3xl">A phased Microsoft 365 to Google Workspace migration for an organization of roughly 5,000 mailboxes, with full historical mail data preserved.</p>
+            </div>
+        </section>
+
+        <!-- Case Study Body -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6 max-w-3xl space-y-12">
+                <div>
+                    <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Challenge</h2>
+                    <p class="text-gray-700 leading-relaxed">Moving roughly 5,000 mailboxes from Microsoft 365 to Google Workspace in two weeks, without downtime, was only half the problem. The harder part was proving that no mail, calendar, or contact data was lost in the process &mdash; at this volume, a migration can look complete and still be silently missing data. That meant migrating in careful phases rather than a single cutover.</p>
+                </div>
+                <div>
+                    <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Approach</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">We migrated mailboxes in phases rather than all at once, using Google Workspace's Data Migration Service for the core mail transfer, with ShareGate supporting the migration workflow alongside it. DNS and MX records were cut over and verified with MxToolbox at each phase to confirm mail flow was routing correctly before moving the next group.</p>
+                    <p class="text-gray-700 leading-relaxed">To answer the "did we lose anything" question, we cross-checked the migrated data against the source throughout the process rather than relying on the migration tools' summaries alone. That caught a small number of recurring calendar events that had initially gone missing; they were identified and resolved during validation.</p>
+                </div>
+                <div>
+                    <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Result</h2>
+                    <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
+                        <li>~5,000 mailboxes migrated over two weeks, in phases, with zero downtime</li>
+                        <li>Full historical mail data preserved</li>
+                        <li>Migrated data verified against the source, including the recovered calendar events</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Stack</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-teal-50 text-teal-700 text-sm font-medium px-3 py-1 rounded-full">Google Workspace Data Migration Service</span>
+                        <span class="bg-teal-50 text-teal-700 text-sm font-medium px-3 py-1 rounded-full">ShareGate</span>
+                        <span class="bg-teal-50 text-teal-700 text-sm font-medium px-3 py-1 rounded-full">MxToolbox</span>
+                    </div>
+                </div>
+                <div class="pt-4">
+                    <a href="../index.html#contact" class="inline-block bg-teal-700 text-white font-bold px-8 py-4 rounded-lg hover:bg-teal-800 cta-button">Talk to Us About Your Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; <span id="copyright-year">2025</span> Fynk.ca. All Rights Reserved.</p>
+            <p class="text-gray-400 mt-2">Custom Software Solutions | Toronto, ON</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.toggle('hidden') === false;
+            mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

@@ -4,24 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fynk.ca - Custom Software Development, Integrations & Migration</title>
+    <meta name="description" content="Fynk is a Toronto-based software studio building custom software, system integrations, and data migrations for small and mid-sized businesses.">
+    <link rel="canonical" href="https://fynk.ca/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Fynk">
+    <meta property="og:url" content="https://fynk.ca/">
+    <meta property="og:title" content="Fynk — Custom Software, Integrations &amp; Data Migration">
+    <meta property="og:description" content="Toronto-based software studio building custom software, system integrations, and data migrations for small and mid-sized businesses.">
+    <meta property="og:image" content="https://fynk.ca/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fynk — Custom Software, Integrations &amp; Data Migration">
+    <meta name="twitter:description" content="Toronto-based software studio building custom software, system integrations, and data migrations for small and mid-sized businesses.">
+    <meta name="twitter:image" content="https://fynk.ca/assets/og-image.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Fynk",
+      "url": "https://fynk.ca/",
+      "image": "https://fynk.ca/assets/og-image.png",
+      "description": "Custom software development, system integrations, and data migration for small and mid-sized businesses.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toronto",
+        "addressRegion": "ON",
+        "addressCountry": "CA"
+      },
+      "areaServed": "CA"
+    }
+    </script>
     <link rel="icon" href="favicon.png" type="image/png">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-        }
-        .hero-bg {
-            background-color: #111827; /* Dark blue-gray */
-        }
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
@@ -30,27 +51,29 @@
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <img src="logo.png" alt="Fynk Logo" class="h-8 w-8 rounded-lg">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="logo.png" alt="Fynk Logo" width="32" height="32" class="h-8 w-8 rounded-lg">
                 <span class="text-2x1 font-bold text-gray-900">Fynk</span>
             </a>
             <nav class="hidden md:flex space-x-8">
-                <a href="#services" class="text-gray-600 hover:text-indigo-600">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-indigo-600">About Us</a>
-                <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+                <a href="#services" class="text-gray-600 hover:text-teal-700">Services</a>
+                <a href="#case-studies" class="text-gray-600 hover:text-teal-700">Case Studies</a>
+                <a href="#about" class="text-gray-600 hover:text-teal-700">About Us</a>
+                <a href="#contact" class="text-gray-600 hover:text-teal-700">Contact</a>
             </nav>
-            <a href="#contact" class="hidden md:inline-block bg-indigo-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-700 cta-button">Get a Quote</a>
+            <a href="#contact" class="hidden md:inline-block bg-teal-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-teal-800 cta-button">Get a Quote</a>
              <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+            <button id="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-gray-700 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#services" class="block py-2 text-gray-600 hover:text-indigo-600">Services</a>
-            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600">About Us</a>
-            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600">Contact</a>
-            <a href="#contact" class="block mt-2 w-full text-center bg-indigo-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-700 cta-button">Get a Quote</a>
+            <a href="#services" class="block py-2 text-gray-600 hover:text-teal-700">Services</a>
+            <a href="#case-studies" class="block py-2 text-gray-600 hover:text-teal-700">Case Studies</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-teal-700">About Us</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-teal-700">Contact</a>
+            <a href="#contact" class="block mt-2 w-full text-center bg-teal-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-teal-800 cta-button">Get a Quote</a>
         </div>
     </header>
 
@@ -58,9 +81,9 @@
         <!-- Hero Section -->
         <section class="hero-bg text-white">
             <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-                <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Engineering Your Digital Solutions</h2>
-                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">We build robust, scalable, and custom software to solve your most complex business challenges.</p>
-                <a href="#contact" class="bg-indigo-500 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-indigo-600 cta-button">Let's Build Together</a>
+                <h1 class="font-display text-4xl md:text-6xl font-bold leading-tight mb-4">Your systems, data, and reports — working as one</h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">We connect the tools your business already runs on, move your data without losing a record, and build reporting that answers the questions your spreadsheets can't.</p>
+                <a href="#contact" class="bg-teal-700 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-teal-800 cta-button">Talk to Us About Your Project</a>
             </div>
         </section>
 
@@ -68,71 +91,201 @@
         <section id="services" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Our Core Services</h3>
-                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">From concept to deployment, we provide end-to-end software solutions tailored to your needs.</p>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900">Our Core Services</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Custom software, system integrations, and data migrations for teams that have outgrown their spreadsheets and manual workarounds.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Service 1: Custom Software Development -->
                     <div class="bg-gray-50 p-8 rounded-xl shadow-md service-card transition-all duration-300">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-6">
-                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 mb-6">
+                            <svg class="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                         </div>
-                        <h4 class="text-2xl font-semibold mb-3">Custom Software Development</h4>
-                        <p class="text-gray-600">We design and develop bespoke software applications from scratch, perfectly aligned with your business processes and goals.</p>
+                        <h3 class="text-2xl font-semibold mb-3">Custom Software Development</h3>
+                        <p class="text-gray-600 mb-4">We build internal tools and applications when an off-the-shelf product doesn't fit how your business actually operates.</p>
+                        <p class="text-sm font-semibold text-gray-700 mb-2">Typical use cases</p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1 mb-4">
+                            <li>Replacing a spreadsheet-based process with a real tool</li>
+                            <li>Internal dashboards for ops, sales, or finance</li>
+                            <li>Automating a manual back-office task</li>
+                        </ul>
+                        <p class="text-sm font-semibold text-gray-700 mb-2">Tools</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">TypeScript / Python</span>
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">PostgreSQL</span>
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">REST / GraphQL APIs</span>
+                        </div>
                     </div>
                     <!-- Service 2: System Integrations -->
                     <div class="bg-gray-50 p-8 rounded-xl shadow-md service-card transition-all duration-300">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-6">
-                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 mb-6">
+                            <svg class="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
-                        <h4 class="text-2xl font-semibold mb-3">System Integrations</h4>
-                        <p class="text-gray-600">Seamlessly connect your disparate systems, applications, and data sources to improve efficiency and create a unified workflow.</p>
+                        <h3 class="text-2xl font-semibold mb-3">System Integrations</h3>
+                        <p class="text-gray-600 mb-4">We connect the systems you already run — CRM, marketing, finance, and ad platforms — so data moves automatically instead of through manual exports.</p>
+                        <p class="text-sm font-semibold text-gray-700 mb-2">Typical use cases</p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1 mb-4">
+                            <li>CRM and finance tools that don't talk to each other</li>
+                            <li>Marketing and ad spend scattered across platforms</li>
+                            <li>Recurring manual CSV exports between systems</li>
+                        </ul>
+                        <p class="text-sm font-semibold text-gray-700 mb-2">Tools</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">REST / Webhook APIs</span>
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">Custom ETL</span>
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">Zapier / Make</span>
+                        </div>
                     </div>
                     <!-- Service 3: Data & Platform Migration -->
                     <div class="bg-gray-50 p-8 rounded-xl shadow-md service-card transition-all duration-300">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 mb-6">
-                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-100 mb-6">
+                            <svg class="w-8 h-8 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </div>
-                        <h4 class="text-2xl font-semibold mb-3">Data & Platform Migration</h4>
-                        <p class="text-gray-600">Modernize your infrastructure by migrating legacy systems and data to cloud platforms with minimal disruption and maximum security.</p>
+                        <h3 class="text-2xl font-semibold mb-3">Data &amp; Platform Migration</h3>
+                        <p class="text-gray-600 mb-4">We move your data and systems to a new platform without losing history or disrupting the business while it happens.</p>
+                        <p class="text-sm font-semibold text-gray-700 mb-2">Typical use cases</p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1 mb-4">
+                            <li>Email/productivity suite migration (e.g. Microsoft 365 → Google Workspace)</li>
+                            <li>Legacy BI tool replacement</li>
+                            <li>Database platform migration with validation &amp; reconciliation</li>
+                        </ul>
+                        <p class="text-sm font-semibold text-gray-700 mb-2">Tools</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">PostgreSQL / dbt</span>
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">Platform migration tools</span>
+                            <span class="bg-teal-50 text-teal-700 text-xs font-medium px-2.5 py-1 rounded-full">Data validation &amp; reconciliation</span>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900">Case Studies</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">A look at two recent engagements. Details are anonymized to protect client confidentiality.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <a href="case-studies/automated-reporting-platform.html" class="block bg-white p-8 rounded-xl shadow-md service-card transition-all duration-300">
+                        <span class="text-sm font-semibold text-teal-700 uppercase tracking-wide">Reporting &amp; Analytics</span>
+                        <h3 class="text-2xl font-semibold mt-2 mb-3 text-gray-900">Replacing Manual KPI Reports with a Real Data Platform</h3>
+                        <p class="text-gray-600">A Postgres-to-Postgres reporting architecture with dbt and Superset dashboards, replacing legacy KPI reports built across two deal streams.</p>
+                        <span class="inline-block mt-4 text-teal-700 font-medium">Read the case study &rarr;</span>
+                    </a>
+                    <a href="case-studies/email-domain-migration.html" class="block bg-white p-8 rounded-xl shadow-md service-card transition-all duration-300">
+                        <span class="text-sm font-semibold text-teal-700 uppercase tracking-wide">Data &amp; Platform Migration</span>
+                        <h3 class="text-2xl font-semibold mt-2 mb-3 text-gray-900">Migrating 5,000 Mailboxes with Zero Downtime</h3>
+                        <p class="text-gray-600">A phased Microsoft 365 to Google Workspace migration with full historical mail preserved, verified against the source record by record.</p>
+                        <span class="inline-block mt-4 text-teal-700 font-medium">Read the case study &rarr;</span>
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- About Us Section -->
-        <section id="about" class="py-20 bg-gray-100">
+        <section id="about" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Your Partner in Innovation</h3>
-                    <p class="text-gray-600 mt-4 text-lg">At Fynk, we're more than just developers; we're problem solvers. Our mission is to leverage technology to create elegant, efficient, and impactful solutions. We believe in building strong partnerships with our clients, founded on transparency, collaboration, and a shared drive for success.</p>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900">Built for SMBs, Not Enterprise Procurement</h2>
+                    <p class="text-gray-600 mt-4 text-lg">Fynk works with small and mid-sized businesses whose CRM, ad platforms, and finance tools don't talk to each other, whose data needs to move somewhere new, or whose reporting still means someone manually exporting spreadsheets every week. We scope the integration or migration, do the work, and hand over something your team can actually run without us.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How We Work Section -->
+        <section id="process" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900">How We Work</h2>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">A short, fixed-scope process — no multi-month discovery phase before you see anything built.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-teal-700 text-white font-bold mx-auto mb-4">1</div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Discovery Call</h3>
+                        <p class="text-gray-600 text-sm">We talk through what's broken or missing, and whether we're a fit.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-teal-700 text-white font-bold mx-auto mb-4">2</div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Scoped Proposal</h3>
+                        <p class="text-gray-600 text-sm">A fixed-scope plan with deliverables and timeline, before any work starts.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-teal-700 text-white font-bold mx-auto mb-4">3</div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Build &amp; Iterate</h3>
+                        <p class="text-gray-600 text-sm">Regular check-ins as the work progresses, not a black box until delivery.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-teal-700 text-white font-bold mx-auto mb-4">4</div>
+                        <h3 class="font-semibold text-gray-900 mb-2">Handover &amp; Support</h3>
+                        <p class="text-gray-600 text-sm">Documentation and a working handover, plus support after launch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900">Frequently Asked Questions</h2>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-8">
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Do you work with small teams, or only larger companies?</h3>
+                        <p class="text-gray-600">Small and mid-sized businesses are who we build for. Engagements are scoped to match your team's size and budget, not an enterprise procurement process.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">How long does a typical engagement take?</h3>
+                        <p class="text-gray-600">Most integration and migration projects run 2&ndash;6 weeks from kickoff to handover. Larger builds, like a full reporting platform, typically run 6&ndash;10 weeks. You'll get a firm timeline as part of the proposal, before any work starts.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Do you offer support after launch?</h3>
+                        <p class="text-gray-600">Every project includes a short support window after handover to catch anything that surfaces once it's in real use. If you want us on call longer-term, we also offer ongoing retainer arrangements.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">We're not sure exactly what we need yet — can we still talk?</h3>
+                        <p class="text-gray-600">Yes. The discovery call exists for exactly that — we'll help you figure out whether the problem is a tool, an integration, or a migration before scoping anything.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-white">
+        <section id="contact" class="py-20 bg-gray-100">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Ready to Start a Project?</h3>
-                    <p class="text-gray-600 mt-2">We'd love to hear about your idea. Fill out the form below or email us directly.</p>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900">Ready to Start a Project?</h2>
+                    <p class="text-gray-600 mt-2">We'd love to hear about your idea. Fill out the form below, book a call, or email us directly.</p>
                 </div>
                 <div class="max-w-2xl mx-auto">
-                    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                    <div class="text-center mb-8">
+                        <a href="https://calendar.app.google/H6V6TcgrFbQEV4Sf8" target="_blank" rel="noopener" class="inline-block border-2 border-teal-700 text-teal-700 font-semibold px-6 py-3 rounded-lg hover:bg-teal-50 cta-button">Book a Call Instead</a>
+                    </div>
+                    <div class="relative mb-8">
+                        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-300"></div></div>
+                        <div class="relative flex justify-center text-sm"><span class="bg-gray-100 px-4 text-gray-600">or send us a message</span></div>
+                    </div>
+                    <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
-                            <input type="text" name="name" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <input type="text" name="name" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
-                            <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500">
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"></textarea>
+                            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500"></textarea>
                         </div>
                         <div>
-                            <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 cta-button">Send Message</button>
+                            <button type="submit" class="w-full bg-teal-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 cta-button">Send Message</button>
                         </div>
                     </form>
                     <div id="form-message" class="mt-4 text-center"></div>
@@ -144,7 +297,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; 2025 Fynk.ca. All Rights Reserved.</p>
+            <p>&copy; <span id="copyright-year">2025</span> Fynk.ca. All Rights Reserved.</p>
             <p class="text-gray-400 mt-2">Custom Software Solutions | Toronto, ON</p>
         </div>
     </footer>
@@ -154,8 +307,11 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            const isOpen = mobileMenu.classList.toggle('hidden') === false;
+            mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
         });
+
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -171,22 +327,31 @@
             });
         });
 
-        // Contact form submission handling
+        // Contact form submission handling (Netlify Forms via fetch, with a
+        // plain-POST fallback for no-JS since the form has no onsubmit handler
+        // attached until this runs)
         const contactForm = document.getElementById('contact-form');
         const formMessage = document.getElementById('form-message');
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Basic validation feedback
-            formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
-            formMessage.className = 'text-green-600 font-medium';
-            
-            contactForm.reset();
 
-            // Clear the message after a few seconds
-            setTimeout(() => {
-                formMessage.textContent = '';
-            }, 5000);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(contactForm)).toString(),
+            }).then((response) => {
+                if (!response.ok) throw new Error(response.statusText);
+                formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+                formMessage.className = 'text-green-600 font-medium';
+                contactForm.reset();
+            }).catch(() => {
+                formMessage.textContent = 'Something went wrong sending your message. Please email us directly.';
+                formMessage.className = 'text-red-600 font-medium';
+            }).finally(() => {
+                setTimeout(() => {
+                    formMessage.textContent = '';
+                }, 5000);
+            });
         });
     </script>
 
