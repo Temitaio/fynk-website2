@@ -32,17 +32,17 @@
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header id="site-header" class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="../index.html" class="flex items-center space-x-2">
                 <img src="../logo.png" alt="Fynk Logo" width="32" height="32" class="h-8 w-8 rounded-lg">
                 <span class="text-2x1 font-bold text-gray-900">Fynk</span>
             </a>
             <nav class="hidden md:flex space-x-8">
-                <a href="../index.html#services" class="text-gray-600 hover:text-teal-700">Services</a>
-                <a href="../index.html#case-studies" class="text-gray-600 hover:text-teal-700">Case Studies</a>
-                <a href="../index.html#about" class="text-gray-600 hover:text-teal-700">About Us</a>
-                <a href="../index.html#contact" class="text-gray-600 hover:text-teal-700">Contact</a>
+                <a href="../index.html#services" class="nav-link text-gray-600 hover:text-teal-700">Services</a>
+                <a href="../index.html#case-studies" class="nav-link text-gray-600 hover:text-teal-700">Case Studies</a>
+                <a href="../index.html#about" class="nav-link text-gray-600 hover:text-teal-700">About Us</a>
+                <a href="../index.html#contact" class="nav-link text-gray-600 hover:text-teal-700">Contact</a>
             </nav>
             <a href="../index.html#contact" class="hidden md:inline-block bg-teal-700 text-white font-semibold px-5 py-2 rounded-lg hover:bg-teal-800 cta-button">Get a Quote</a>
              <!-- Mobile Menu Button -->
@@ -63,7 +63,7 @@
     <main>
         <!-- Case Study Hero -->
         <section class="bg-gray-900 text-white">
-            <div class="container mx-auto px-6 py-20 md:py-24">
+            <div class="container mx-auto px-6 py-20 md:py-24 reveal">
                 <span class="text-sm font-semibold text-teal-400 uppercase tracking-wide">Reporting &amp; Analytics Case Study</span>
                 <h1 class="font-display text-3xl md:text-5xl font-bold leading-tight mt-2 mb-4">Replacing Manual KPI Reports with a Real Data Platform</h1>
                 <p class="text-lg text-gray-300 max-w-3xl">How we rebuilt a Canadian company's KPI reporting on a Postgres-to-Postgres data platform, engaged as an external contractor.</p>
@@ -73,17 +73,17 @@
         <!-- Case Study Body -->
         <section class="py-16 bg-white">
             <div class="container mx-auto px-6 max-w-3xl space-y-12">
-                <div>
+                <div class="reveal">
                     <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Challenge</h2>
                     <p class="text-gray-700 leading-relaxed">The company's KPI reporting ran on legacy dashboards that were slow to update and hard to extend. Reports covered two separate deal streams, and every new metric or breakdown meant more manual, hand-built work rather than a change to a shared data model. There was no single place where the CRM, marketing, and advertising data actually lined up.</p>
                 </div>
-                <div>
+                <div class="reveal">
                     <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Approach</h2>
                     <p class="text-gray-700 leading-relaxed mb-4">We built a Postgres-to-Postgres reporting architecture: source data landed in Postgres, and dbt modeled it through staging, intermediate, and mart layers so each deal stream had its own clean, documented set of metrics built on shared logic rather than duplicated queries.</p>
                     <p class="text-gray-700 leading-relaxed mb-4">For the dashboard layer, we evaluated Power BI, Looker, and Lightdash alongside Preset (hosted Apache Superset), and selected Preset on cost and scale for the company's size. Dashboards drew on the CRM, Zoho, Google Ads, and Meta Ads, giving the team one place to see pipeline, marketing spend, and ad performance together.</p>
                     <p class="text-gray-700 leading-relaxed">We ran the build through a series of stakeholder feedback sessions, refining metric definitions and dashboard layouts against how the team actually used the reports day to day.</p>
                 </div>
-                <div>
+                <div class="reveal">
                     <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Result</h2>
                     <ul class="list-disc list-inside text-gray-700 leading-relaxed space-y-2">
                         <li>Legacy KPI reports across both deal streams replaced by a single set of Preset dashboards on shared dbt models</li>
@@ -91,7 +91,7 @@
                         <li>Metric definitions and dashboard layouts refined directly with stakeholders, matching how the team actually tracked performance</li>
                     </ul>
                 </div>
-                <div>
+                <div class="reveal">
                     <h2 class="font-display text-2xl font-semibold text-gray-900 mb-3">Stack</h2>
                     <div class="flex flex-wrap gap-2">
                         <span class="bg-teal-50 text-teal-700 text-sm font-medium px-3 py-1 rounded-full">PostgreSQL</span>
@@ -111,9 +111,27 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-8 text-center">
-            <p>&copy; <span id="copyright-year">2025</span> Fynk.ca. All Rights Reserved.</p>
-            <p class="text-gray-400 mt-2">Custom Software Solutions | Toronto, ON</p>
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between gap-8 mb-8 text-center md:text-left">
+                <div>
+                    <p class="font-display text-xl font-bold mb-2">Fynk</p>
+                    <p class="text-gray-400 text-sm">Custom Software Solutions | Toronto, ON</p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+                    <a href="../index.html#services" class="text-gray-400 hover:text-white">Services</a>
+                    <a href="../index.html#case-studies" class="text-gray-400 hover:text-white">Case Studies</a>
+                    <a href="../index.html#process" class="text-gray-400 hover:text-white">Process</a>
+                    <a href="../index.html#faq" class="text-gray-400 hover:text-white">FAQ</a>
+                    <a href="../index.html#contact" class="text-gray-400 hover:text-white">Contact</a>
+                </div>
+                <div class="text-sm">
+                    <a href="mailto:josh@fynk.ca" class="block text-gray-400 hover:text-white">josh@fynk.ca</a>
+                    <a href="tel:+16824756300" class="block text-gray-400 hover:text-white mt-1">(682) 475-6300</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                <p>&copy; <span id="copyright-year">2025</span> Fynk.ca. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -127,6 +145,23 @@
         });
 
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+        // Scroll-reveal: fade/slide elements in once they enter the viewport
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+        // Header gains a shadow once the page is scrolled
+        const siteHeader = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            siteHeader.classList.toggle('header-scrolled', window.scrollY > 10);
+        }, { passive: true });
     </script>
 
 </body>
