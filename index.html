@@ -118,7 +118,11 @@
                     <p class="text-gray-600 mt-2">We'd love to hear about your idea. Fill out the form below or email us directly.</p>
                 </div>
                 <div class="max-w-2xl mx-auto">
-                    <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                    <form id="contact-form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="space-y-6">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
                             <input type="text" name="name" id="name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
@@ -171,22 +175,31 @@
             });
         });
 
-        // Contact form submission handling
+        // Contact form submission handling (Netlify Forms via fetch, with a
+        // plain-POST fallback for no-JS since the form has no onsubmit handler
+        // attached until this runs)
         const contactForm = document.getElementById('contact-form');
         const formMessage = document.getElementById('form-message');
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Basic validation feedback
-            formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
-            formMessage.className = 'text-green-600 font-medium';
-            
-            contactForm.reset();
 
-            // Clear the message after a few seconds
-            setTimeout(() => {
-                formMessage.textContent = '';
-            }, 5000);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(contactForm)).toString(),
+            }).then((response) => {
+                if (!response.ok) throw new Error(response.statusText);
+                formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+                formMessage.className = 'text-green-600 font-medium';
+                contactForm.reset();
+            }).catch(() => {
+                formMessage.textContent = 'Something went wrong sending your message. Please email us directly.';
+                formMessage.className = 'text-red-600 font-medium';
+            }).finally(() => {
+                setTimeout(() => {
+                    formMessage.textContent = '';
+                }, 5000);
+            });
         });
     </script>
 
